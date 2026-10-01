@@ -5,7 +5,7 @@ SAYDAM is a proof-first community meme concept. The name means “transparent”
 This repository contains:
 
 - a responsive Next.js landing page with a safe pre-launch state;
-- a fixed-supply ERC-20 draft for Base;
+- a fixed-supply ERC-20 draft for Base and a separate team vesting contract;
 - transparent tokenomics and authority documentation;
 - X and Telegram copy, a 30-day content calendar and moderation rules;
 - launch, verification and incident-response checklists;
@@ -19,6 +19,20 @@ npm run dev
 ```
 
 Open `http://localhost:3000`.
+
+## Verification
+
+```bash
+npm run typecheck
+npm run build
+npm run contract:test
+npm run security:audit
+```
+
+The contract suite checks the 1 billion fixed supply, all four allocations,
+standard transfers, zero-address rejection, the 12-month team cliff, the
+following 24-month linear vesting schedule and the absence of mint, pause,
+blacklist, tax, owner and upgrade functions from the token ABI.
 
 ## Required launch values
 
@@ -34,6 +48,7 @@ Import this repository in Vercel or run `vercel`. Add only public site variables
 - [Social and community playbook](docs/SOCIAL-PLAYBOOK.md)
 - [Risk and transparency policy](docs/RISK-AND-TRANSPARENCY.md)
 - [Brand guide](docs/BRAND.md)
+- [Cost-minimized launch readiness](docs/LAUNCH-READINESS.md)
 
 ## Status
 

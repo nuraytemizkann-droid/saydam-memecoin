@@ -2,6 +2,7 @@ node_modules/
 .next/
 .vercel/
 artifacts/
+cache/
 coverage/
 .env*
 !.env.example
