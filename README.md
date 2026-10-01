@@ -5,7 +5,7 @@ SAYDAM is a proof-first community meme concept. The name means “transparent”
 This repository contains:
 
 - a responsive Next.js landing page with a safe pre-launch state;
-- a fixed-supply ERC-20 draft for Base and a separate team vesting contract;
+- a fixed-supply ERC-20 for Base, team vesting and ownerless Uniswap v2 LP lock contracts;
 - transparent tokenomics and authority documentation;
 - X and Telegram copy, a 30-day content calendar and moderation rules;
 - launch, verification and incident-response checklists;
@@ -31,8 +31,9 @@ npm run security:audit
 
 The contract suite checks the 1 billion fixed supply, all four allocations,
 standard transfers, zero-address rejection, the 12-month team cliff, the
-following 24-month linear vesting schedule and the absence of mint, pause,
-blacklist, tax, owner and upgrade functions from the token ABI.
+following 24-month linear vesting schedule, a fixed 12-month LP lock and the
+absence of mint, pause, blacklist, tax, owner and upgrade functions from the
+token ABI.
 
 ## Required launch values
 

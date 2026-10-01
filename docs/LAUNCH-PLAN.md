@@ -21,7 +21,7 @@
 | Ethereum mainnet | Deepest liquidity and mature tooling | Expensive deployment and trading for an MVP | Not suitable for the first launch |
 | BNB Chain | Low fees and large retail audience | Brand fit and trust perception are weaker for this concept | Reserve option only |
 
-**Decision:** Base, with a standard fixed-supply ERC-20 built from OpenZeppelin and a public Uniswap pool. No launchpad contract, presale or bonding curve in MVP.
+**Decision:** Base, with a standard fixed-supply ERC-20 built from OpenZeppelin and a public full-range Uniswap v2 SAYDAM/WETH pool. The ERC-20 LP tokens are placed in the ownerless `SaydamLiquidityLock` for at least 12 months. No launchpad contract, presale or bonding curve in MVP.
 
 Why this decision: Base uses ETH for fees and Uniswap supports liquidity on Base. The contract is easy to verify line by line, while the Coinbase-linked ecosystem lowers onboarding friction. Solana remains a valid alternative if audience testing shows that chain distribution matters more than the “verifiable independent launch” story.
 
@@ -31,7 +31,7 @@ Total supply: **1,000,000,000 $SAYDAM**. Minted once at deployment.
 
 | Allocation | Amount | Rules |
 |---|---:|---|
-| Public liquidity | 820,000,000 (82%) | Deposited into the announced SAYDAM/WETH pool. LP position locked for at least 12 months; lock transaction published before trading promotion. No silent withdrawals. |
+| Public liquidity | 820,000,000 (82%) | Deposited into the announced Uniswap v2 SAYDAM/WETH pool. LP tokens sent to the ownerless `SaydamLiquidityLock` for at least 12 months; lock transaction published before trading promotion. No silent withdrawals. |
 | Community programs | 100,000,000 (10%) | Separate labelled multisig. Monthly budget and recipients disclosed. No rewards for undisclosed shilling or fake engagement. |
 | Team | 50,000,000 (5%) | Separate vesting contract. 12-month cliff, then linear release over the next 24 months. Contract and beneficiary published. |
 | Operations | 30,000,000 (3%) | 2-of-3 Safe multisig. Used for legal, design, moderation, audit, listings and infrastructure. Monthly statement published. |

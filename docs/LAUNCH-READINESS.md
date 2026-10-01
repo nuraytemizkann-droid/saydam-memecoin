@@ -35,9 +35,12 @@ free.
 7. Rehearse the same order on Base Sepolia before any mainnet signature.
 8. Publish the token address for at least 24 hours of public inspection. Keep
    the site without a buy button.
-9. Create the announced SAYDAM/WETH pool using the exact published amounts.
-10. Lock the LP position for at least 12 months and publish the pool, lock and
-    transaction links before enabling the official buy link.
+9. Create the announced full-range Uniswap v2 SAYDAM/WETH pool using the exact
+   published amounts.
+10. Deploy `SaydamLiquidityLock` with the v2 LP token address, published
+    beneficiary and an unlock timestamp at least 365 days later. Transfer every
+    LP token to it and publish the pool, lock and transaction links before
+    enabling the official buy link.
 
 ## Owner-controlled inputs still needed
 
